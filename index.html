@@ -1,0 +1,2087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+  <title>PROSHOT PIXEL | Photography by Vrushali</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family:  sans-serif;
+      background: radial-gradient(circle at 10% 20%, #332638, #211A24);
+      color: #F6EEE8;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+    :root {
+      --electric-violet: #5A3D55;
+      --electric-blue: #7A506B;
+      --electric-cyan: #B97A8F;
+      --electric-mint: #D8A46F;
+      --bg-dark: #211A24;
+    }
+    .page-wrapper {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--bg-dark);
+      background-image: linear-gradient(125deg, rgba(78,53,73,0.06) 0%, rgba(0,101,248,0.05) 100%);
+      padding: 20px 20px 100px;
+    }
+    .views-top-left {
+      position: fixed; top: 14px; left: 14px; z-index: 1100;
+      background: rgba(33,26,36,0.92); backdrop-filter: blur(12px);
+      padding: 6px 16px; border-radius: 40px; font-size: 13px; font-weight: 600;
+      color: #D8A46F; border: 1px solid rgba(185,122,143,0.60);
+      font-family: monospace;
+    }
+    .views-top-left i { margin-right: 6px; color: #B97A8F; }
+    .views-top-left b { color: #D8A46F; text-shadow: 0 0 3px #B97A8F; }
+    .upper { text-align: center; margin-bottom: 28px; margin-top: 8px; }
+    .profile-pic-img {
+      width: 128px; height: 128px; object-fit: cover; border-radius: 5%;
+      border: 3px solid #D8A46F; box-shadow: 0 0 20px rgba(216,164,111,0.30);
+      background: #2B202D; margin-bottom: 16px;
+    }
+    .firmname {
+      font-size: 32px; font-weight: 800;
+      background: linear-gradient(135deg, #5A3D55, #7A506B, #B97A8F, #D8A46F);
+      background-clip: text; -webkit-background-clip: text; color: transparent;
+    }
+    .firmname-underline {
+        height: 3px;
+      background: linear-gradient(90deg, #5A3D55, #B97A8F, #D8A46F);
+      margin: 8px auto; border-radius: 4px;
+    }
+    .name { font-size: 18px; color: #D9C3CC; line-height: 1.4; }
+    .name span { display: block; margin-top: 6px; font-size: 13px; color: #B97A8F; letter-spacing: 1px; }
+    .round-contact-buttons {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;
+      margin: 28px 0 32px;
+    }
+    .round-contact-buttons a {
+      background: rgba(10,20,45,0.8); backdrop-filter: blur(8px);
+      padding: 10px 22px; border-radius: 60px; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 10px; font-weight: 600;
+      color: #B97A8F; border: 1px solid rgba(185,122,143,0.35);
+      transition: all 0.25s ease;
+    }
+    .round-contact-buttons a:hover { transform: translateY(-3px); border-color: #D8A46F; box-shadow: 0 0 15px rgba(0,255,222,0.3); }
+    .section-container {
+      background: rgba(8,12,28,0.7); backdrop-filter: blur(4px);
+      border-radius: 32px; padding: 20px 24px; margin-bottom: 24px;
+      border: 1px solid rgba(185,122,143,0.22);
+      transition: all 0.2s;
+    }
+    .section-header {
+      font-size: 22px; font-weight: 700;
+      background: linear-gradient(95deg, #5A3D5520, #7A506B30);
+      display: inline-block; padding: 8px 20px 8px 24px; border-radius: 40px;
+      border-left: 4px solid #D8A46F; margin-bottom: 18px; color: #D8A46F;
+    }
+    
+    /* Important Notes Section */
+    .important-notes {
+      background: rgba(5, 12, 28, 0.8);
+      border-radius: 28px;
+      padding: 20px;
+      margin: 24px 0;
+      border: 1px solid rgba(0,202,255,0.35);
+    }
+    .important-notes h3 {
+      color: #D8A46F;
+      font-size: 20px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .notes-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .note-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(185,122,143,0.18);
+    }
+    .note-item:last-child {
+      border-bottom: none;
+    }
+    .note-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(0,202,255,0.15);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #B97A8F;
+      flex-shrink: 0;
+    }
+    .note-content {
+      flex: 1;
+    }
+    .note-title {
+      font-weight: 700;
+      color: #D8A46F;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .note-text {
+      font-size: 12px;
+      color: #E1D2D7;
+      line-height: 1.4;
+    }
+    
+    /* COLLAPSIBLE PANEL STYLES */
+    .accordion-category {
+      margin-bottom: 20px;
+      border-radius: 28px;
+      background: rgba(5, 12, 28, 0.6);
+      border: 1px solid rgba(0, 202, 255, 0.35);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 22px;
+      cursor: pointer;
+      background: linear-gradient(105deg, rgba(78,53,73,0.09), rgba(185,122,143,0.06));
+      transition: all 0.25s;
+    }
+    .accordion-header:hover {
+      background: linear-gradient(105deg, rgba(78,53,73,0.14), rgba(185,122,143,0.10));
+    }
+    .category-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .category-title-wrap i {
+      font-size: 28px;
+      color: #D8A46F;
+      filter: drop-shadow(0 0 6px #B97A8F);
+    }
+    .category-title-wrap h3 {
+      font-size: 22px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #B97A8F, #D8A46F);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.3px;
+    }
+    .accordion-toggle-icon {
+      font-size: 24px;
+      color: #B97A8F;
+      transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+    .accordion-content-packages {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
+      padding: 0 20px;
+    }
+    .accordion-content-packages.open {
+      max-height: 5000px;
+      padding: 8px 20px 24px;
+    }
+    .package-grid-inside {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 12px;
+    }
+    .product-card {
+      background: rgba(5,15,35,0.85);
+      border-radius: 28px;
+      padding: 20px;
+      border: 1px solid rgba(185,122,143,0.35);
+      transition: all 0.3s;
+    }
+    .product-card:hover {
+      transform: translateY(-4px);
+      border-color: #D8A46F;
+      box-shadow: 0 12px 28px rgba(185,122,143,0.22);
+    }
+    .card-title { font-size: 22px; font-weight: 800; color: #D8A46F; margin-bottom: 12px; }
+    .product-description { font-size: 13px; margin: 16px 0; color: #E0D1D7; line-height: 1.6; }
+    .feature-list { list-style: none; margin: 16px 0; }
+    .feature-list li { margin: 8px 0; padding-left: 24px; position: relative; font-size: 13px; }
+    .feature-list li:before { content: "✨"; position: absolute; left: 0; color: #D8A46F; }
+    .addon-box { background: rgba(55,38,47,0.30); border-radius: 20px; padding: 14px; margin-top: 12px; border-left: 3px solid #B97A8F; }
+    .addon-box h5 { color: #B97A8F; margin-bottom: 8px; font-size: 14px; }
+    .addon-list { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; color: #CDBAC2; }
+    .package-terms-box { background: rgba(55,38,47,0.25); border-radius: 20px; padding: 14px; margin-top: 14px; border-left: 3px solid #D8A46F; }
+    .package-terms-box h5 { color: #D8A46F; margin-bottom: 8px; font-size: 13px; display: flex; align-items: center; gap: 6px; }
+    .package-terms-box ul { margin-left: 20px; font-size: 12px; color: #E0D1D7; }
+    .package-terms-box li { margin: 4px 0; }
+    .terms-box { background: rgba(55,38,47,0.30); border-radius: 20px; padding: 16px; margin-top: 20px; border-left: 3px solid #D8A46F; }
+    .terms-box h4 { color: #B97A8F; margin-bottom: 12px; }
+    .terms-box ul { padding-left: 20px; }
+    .terms-box li { margin: 6px 0; font-size: 12px; color: #CDBAC2; }
+    .product-enquiry-section { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(185,122,143,0.28); }
+    .package-price { display: inline-block; background: linear-gradient(95deg, #5A3D55, #7A506B); padding: 6px 18px; border-radius: 40px; font-weight: 800; font-size: 20px; color: white; }
+    .product-enquiry-btn { background: linear-gradient(95deg, #5A3D55, #7A506B); color: white; padding: 10px 28px; border-radius: 40px; font-weight: 700; font-size: 14px; cursor: pointer; border: none; transition: 0.2s; display: inline-flex; align-items: center; gap: 8px; }
+    .product-enquiry-btn:hover { background: #B97A8F; color: #211A24; box-shadow: 0 0 16px #D8A46F; transform: scale(1.02); }
+    
+    /* Category Gallery Section */
+    .category-gallery {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 2px solid rgba(185,122,143,0.35);
+    }
+    .category-gallery h4 {
+      font-size: 18px;
+      color: #D8A46F;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .category-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 12px;
+    }
+    .category-gallery-img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 20px;
+      cursor: pointer;
+      border: 2px solid #B97A8F;
+      transition: 0.2s;
+    }
+    .category-gallery-img:hover {
+      transform: scale(0.98);
+      box-shadow: 0 0 12px #D8A46F;
+      border-color: #D8A46F;
+    }
+    
+    /* Dresses Section Styles */
+    .dresses-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .dress-card {
+      background: rgba(10, 20, 40, 0.6);
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(185,122,143,0.35);
+      transition: all 0.3s;
+    }
+    .dress-card:hover {
+      transform: translateY(-5px);
+      border-color: #D8A46F;
+      box-shadow: 0 8px 20px rgba(185,122,143,0.18);
+    }
+    .dress-image {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      cursor: pointer;
+    }
+    .dress-info {
+      padding: 12px;
+      text-align: center;
+    }
+    .dress-color {
+      font-size: 14px;
+      font-weight: 600;
+      color: #D8A46F;
+      letter-spacing: 0.5px;
+    }
+    .download-pdf-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(95deg, #5A3D55, #7A506B);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.2s;
+      margin-top: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .download-pdf-btn:hover {
+      background: #B97A8F;
+      color: #211A24;
+      box-shadow: 0 0 16px #D8A46F;
+      transform: scale(1.02);
+    }
+    
+    /* Reviews Section */
+    .reviews-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .review-card {
+      background: rgba(10, 20, 40, 0.6);
+      border-radius: 24px;
+      padding: 18px;
+      border: 1px solid rgba(185,122,143,0.28);
+      transition: all 0.3s;
+    }
+    .review-card:hover {
+      border-color: #D8A46F;
+      transform: translateX(5px);
+    }
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .reviewer-name {
+      font-weight: 700;
+      color: #D8A46F;
+      font-size: 16px;
+    }
+    .review-rating {
+      color: #C79A55;
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+    .review-date {
+      font-size: 11px;
+      color: #9F8D97;
+    }
+    .review-text {
+      font-size: 13px;
+      color: #E1D2D7;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    .review-source {
+      font-size: 11px;
+      color: #B97A8F;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .rating-stars {
+      color: #C79A55;
+      font-size: 14px;
+    }
+    .google-rating-badge {
+      background: rgba(66, 133, 244, 0.2);
+      border-radius: 30px;
+      padding: 8px 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(66, 133, 244, 0.5);
+    }
+    .google-rating-badge i {
+      color: #6F82B8;
+      font-size: 20px;
+    }
+    .avg-rating {
+      font-size: 24px;
+      font-weight: 800;
+      color: #D8A46F;
+    }
+    .give-review-btn {
+      background: linear-gradient(95deg, #5A3D55, #7A506B);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .give-review-btn:hover {
+      background: #B97A8F;
+      color: #211A24;
+      box-shadow: 0 0 16px #D8A46F;
+      transform: scale(1.02);
+    }
+    .review-loading {
+      text-align: center;
+      padding: 40px;
+      color: #B97A8F;
+    }
+    .no-reviews {
+      text-align: center;
+      padding: 30px;
+      color: #9F8D97;
+    }
+    
+    /* About Us Section */
+    .about-us-content {
+      color: #E0D1D7;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .about-us-content p { margin-bottom: 16px; }
+    .why-choose-us {
+      margin-top: 20px;
+      background: rgba(0, 101, 248, 0.15);
+      border-radius: 24px;
+      padding: 18px;
+      border-left: 3px solid #D8A46F;
+    }
+    .why-choose-us h3 { color: #D8A46F; margin-bottom: 12px; font-size: 18px; }
+    .why-choose-us ul { list-style: none; padding-left: 0; }
+    .why-choose-us li { margin: 10px 0; padding-left: 24px; position: relative; }
+    .why-choose-us li:before { content: "✨"; position: absolute; left: 0; color: #D8A46F; }
+    
+    /* Contact Info */
+    .contact-info-list { display: flex; flex-direction: column; gap: 20px; }
+    .contact-item { display: flex; align-items: center; gap: 16px; }
+    .contact-icon { width: 44px; height: 44px; background: rgba(78,53,73,0.18); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 20px; color: #B97A8F; }
+    .contact-text { color: #E1D2D7; font-size: 14px; font-weight: 500; flex: 1; }
+    .contact-text a { color: #E1D2D7; text-decoration: none; }
+    
+    /* Payment Section */
+    .payment-list { display: flex; flex-direction: column; gap: 16px; }
+    .payment-item { display: flex; align-items: center; gap: 16px; padding: 12px 0; border-bottom: 1px solid rgba(185,122,143,0.18); }
+    .payment-item:last-child { border-bottom: none; }
+    .paytm-icon { color: #36A8C9; font-size: 28px; width: 44px; text-align: center; }
+    .phonepe-icon { color: #70508A; font-size: 28px; width: 44px; text-align: center; }
+    .gpay-icon { color: #3C9B79; font-size: 28px; width: 44px; text-align: center; }
+    .payment-text { color: #E1D2D7; font-size: 15px; font-weight: 500; flex: 1; }
+    .payment-number { color: #D8A46F; font-weight: 700; font-size: 16px; }
+	
+	
+	 /* DRESSES SECTION - ACCORDION + 3 COLUMN GRID */
+    .dress-accordion {
+      margin: 20px 0;
+      border-radius: 28px;
+      background: rgba(5, 12, 28, 0.6);
+      border: 1px solid rgba(0, 202, 255, 0.45);
+      overflow: hidden;
+    }
+	 .dress-accordion-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 24px;
+      cursor: pointer;
+      background: linear-gradient(105deg, rgba(78,53,73,0.14), rgba(185,122,143,0.10));
+    }
+    .dress-accordion-header h3 {
+      font-size: 22px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #B97A8F, #D8A46F);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .dress-accordion-header i:first-child { font-size: 28px; color: #D8A46F; }
+    .dress-accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      padding: 0 20px;
+    }
+    .dress-accordion-content.open {
+      max-height: 100%;
+      padding: 8px 20px 28px;
+    }
+    /* 3-COLUMN GRID FOR DRESSES */
+    .dresses-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 20px 0 24px;
+    }
+    .dress-card {
+      background: rgba(10, 20, 40, 0.7);
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(185,122,143,0.35);
+      transition: all 0.3s;
+    }
+    .dress-card:hover {
+      transform: translateY(-5px);
+      border-color: #D8A46F;
+      box-shadow: 0 8px 20px rgba(185,122,143,0.22);
+    }
+    .dress-image {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      cursor: pointer;
+    }
+    .dress-info {
+      padding: 10px 6px;
+      text-align: center;
+    }
+    .dress-color {
+      font-size: 12px;
+      font-weight: 600;
+      color: #D8A46F;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+
+    
+    /* Modal */
+    .modal { display: none; position: fixed; z-index: 2000; background: rgba(33,26,36,0.96); top: 0; left: 0; width: 100%; height: 100%; align-items: center; justify-content: center; backdrop-filter: blur(8px); }
+    .modal-content { max-width: 90%; max-height: 75%; border-radius: 24px; border: 2px solid #D8A46F; object-fit: contain; }
+    .modal-caption { position: absolute; bottom: 20px; left: 0; right: 0; text-align: center; color: #D8A46F; background: rgba(33,26,36,0.82); padding: 12px; font-size: 14px; backdrop-filter: blur(8px); }
+    .modal-nav-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(185,122,143,0.60); backdrop-filter: blur(8px); color: white; font-size: 32px; padding: 16px 22px; border-radius: 60px; cursor: pointer; border: 1px solid #D8A46F; z-index: 2001; }
+    .modal-nav-btn:hover { background: #B97A8F; color: #211A24; }
+    .prev-btn { left: 20px; }
+    .next-btn { right: 20px; }
+    .close { position: absolute; top: 20px; right: 30px; color: #D8A46F; font-size: 40px; cursor: pointer; z-index: 2001; }
+    
+    .links-container { display: flex; flex-direction: column; gap: 16px; }
+    .link-card { background: rgba(5,10,30,0.7); border-radius: 24px; padding: 12px 18px; display: flex; align-items: center; gap: 18px; text-decoration: none; border: 1px solid rgba(185,122,143,0.28); transition: 0.2s; }
+    .link-card:hover { transform: translateX(6px); border-color: #D8A46F; }
+    .link-icon { width: 56px; height: 56px; border-radius: 18px; display: flex; align-items: center; justify-content: center; }
+    .link-card.whatsapp-card .link-icon { background: #075E54; }
+    .link-card.instagram-card .link-icon { background: radial-gradient(circle at 30% 110%, #ffdb7e, #f46f30, #d62976, #962fbf, #4f5bd5); }
+    .link-card.facebook-card .link-icon { background: #1877F2; }
+    .link-card.justdial-card .link-icon { background: #2E6B9E; }
+    .link-card.phone-card .link-icon { background: #7A506B; }
+    .link-icon i { font-size: 32px; color: white; }
+    .link-name { font-weight: 800; color: #B97A8F; }
+    .link-description { font-size: 12px; color: #B9A6AE; }
+    .qr-code-wrapper { text-align: center; margin: 24px 0; }
+    .qr-code-image { width: 140px; border-radius: 28px; background: white; padding: 6px; border: 2px solid #D8A46F; }
+    .footer { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(5,5,25,0.9); backdrop-filter: blur(16px); border-top: 1px solid #B97A8F; padding: 8px 8px 12px; z-index: 1000; }
+    .footer-menu { display: flex; overflow-x: auto; gap: 6px; justify-content: space-between; max-width: 600px; margin: 0 auto; list-style: none; }
+    .footer-menu li { list-style: none; }
+    .footer-menu-link { text-decoration: none; text-align: center; font-size: 10px; color: #B97A8F; display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 56px; transition: 0.2s; }
+    .footer-menu-link:hover { color: #D8A46F; }
+    .footer-menu-icon { font-size: 20px; color: #D8A46F; }
+    .copyright-wrapper { text-align: center; padding: 24px 12px 80px; font-size: 11px; color: #8D7883; }
+    .copy-link-wrapper { background: rgba(168,94,114,0.12); border-radius: 60px; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; border: 1px solid #B97A8F; }
+    .shadow-buttons { display: flex; gap: 16px; flex-wrap: wrap; margin: 15px 0; }
+    .shadow-button { background: rgba(168,94,114,0.12); border: 1px solid rgba(0,202,255,0.5); padding: 10px 22px; border-radius: 40px; font-weight: 600; color: #B97A8F; display: inline-flex; align-items: center; gap: 10px; cursor: pointer; }
+    @media (max-width:500px){ .page-wrapper { padding: 20px 14px 100px; } .card-title { font-size: 19px; } .modal-nav-btn { padding: 10px 16px; font-size: 24px; } .prev-btn { left: 10px; } .next-btn { right: 10px; } }
+
+    /* ===== PROSHOT PIXEL PASTEL REFINEMENT ===== */
+    :root{
+      --electric-violet:#8A5D72;
+      --electric-blue:#9A657C;
+      --electric-cyan:#B97A8F;
+      --electric-mint:#D8A46F;
+      --bg-dark:#F7F1EC;
+      --pastel-cream:#FFF9F4;
+      --pastel-blush:#F1E1E6;
+      --pastel-rose:#DDB9C4;
+      --pastel-plum:#4E3549;
+      --pastel-gold:#C79A55;
+      --pastel-text:#46343F;
+      --pastel-muted:#7F6A74;
+    }
+    body{
+      font-family:"DM Sans","Space Grotesk",sans-serif;
+      background:linear-gradient(180deg,#F7F1EC 0%,#F1E5EA 48%,#F7F1EC 100%);
+      color:var(--pastel-text);
+    }
+    .page-wrapper{
+      background:linear-gradient(180deg,#FFF9F4 0%,#F4EAE7 100%);
+      background-image:none;
+      box-shadow:0 0 50px rgba(112,86,105,.08);
+    }
+    .views-top-left{
+      top:10px;left:auto;right:10px;
+      padding:4px 9px;border-radius:18px;
+      font-size:10px;font-weight:600;
+      color:var(--pastel-plum);
+      background:rgba(255,250,248,.92);
+      border:1px solid rgba(202,165,106,.38);
+      box-shadow:0 4px 14px rgba(112,86,105,.10);
+      font-family:"DM Sans",sans-serif;
+    }
+    .views-top-left i{margin-right:4px;color:var(--pastel-gold)}
+    .views-top-left b{color:var(--pastel-plum);text-shadow:none}
+    .upper{margin-top:5px;margin-bottom:18px}
+    .profile-pic-img{
+      border-color:var(--pastel-rose);
+      box-shadow:0 8px 22px rgba(112,86,105,.12);
+    }
+    .firmname{
+      background:none;color:var(--pastel-plum);
+      -webkit-text-fill-color:initial;
+    }
+    .firmname-underline{background:var(--pastel-rose);height:2px}
+    .name{color:var(--pastel-plum)}
+    .name span{color:var(--pastel-gold)}
+    .round-contact-buttons{gap:8px;margin:18px 0 24px}
+    .round-contact-buttons a{
+      background:var(--pastel-cream);
+      color:var(--pastel-plum);
+      border-color:rgba(168,121,147,.28);
+      box-shadow:0 3px 12px rgba(112,86,105,.06);
+    }
+    .round-contact-buttons a:hover{border-color:var(--pastel-gold);box-shadow:0 6px 16px rgba(112,86,105,.10)}
+    .section-container,.important-notes{
+      background:rgba(255,250,248,.92);
+      border-color:rgba(168,121,147,.24);
+      box-shadow:0 8px 24px rgba(112,86,105,.06);
+    }
+    .section-header{
+      color:var(--pastel-plum);
+      background:var(--pastel-blush);
+      border-left-color:var(--pastel-gold);
+      font-size:20px;
+      padding:7px 16px;
+      margin-bottom:14px;
+    }
+    .accordion-category{
+      background:var(--pastel-cream);
+      border-color:rgba(168,121,147,.28);
+      box-shadow:0 6px 18px rgba(112,86,105,.06);
+      margin-bottom:12px;
+    }
+    .accordion-header{
+      padding:13px 16px;
+      background:linear-gradient(90deg,#F1E1E6,#FFF9F4);
+      border-bottom:1px solid rgba(168,121,147,.12);
+    }
+    .category-title-wrap{gap:10px}
+    .category-title-wrap i{font-size:21px;color:var(--pastel-plum);filter:none}
+    .category-title-wrap h3{
+      font-size:18px;color:var(--pastel-plum);
+      background:none;-webkit-text-fill-color:initial;
+    }
+    .accordion-toggle-icon{font-size:18px;color:var(--pastel-gold)}
+    .accordion-content-packages{padding:0 14px}
+    .accordion-content-packages.open{padding:8px 14px 18px}
+    .package-grid-inside{gap:12px;margin-top:6px}
+    .product-card{
+      background:#FFFBF7;
+      border-color:rgba(168,121,147,.22);
+      border-radius:18px;
+      padding:14px;
+      box-shadow:0 4px 14px rgba(112,86,105,.05);
+    }
+    .product-card:hover{transform:none;border-color:var(--pastel-rose);box-shadow:0 8px 20px rgba(112,86,105,.09)}
+    .package-card-head{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) auto auto;
+      align-items:center;
+      gap:9px;
+      padding:10px 11px;
+      border-radius:13px;
+      background:#F1E2E7;
+      border:1px solid rgba(168,121,147,.18);
+      margin-bottom:11px;
+    }
+    .package-card-head .card-title{
+      margin:0;font-size:16px;line-height:1.2;color:var(--pastel-plum);
+      min-width:0;
+    }
+    .package-price{
+      background:var(--pastel-plum);
+      color:#FFF9F4;
+      padding:5px 11px;
+      border-radius:20px;
+      font-size:14px;
+      white-space:nowrap;
+    }
+    .package-head-icon{color:var(--pastel-gold);font-size:14px}
+    .product-description,.feature-list li,.package-terms-box ul,.terms-box li{color:var(--pastel-text)}
+    .feature-list li:before{content:"\\f00c";font-family:"Font Awesome 6 Free";font-weight:900;color:var(--pastel-rose)}
+    .addon-box,.package-terms-box,.terms-box,.why-choose-us{
+      background:#F4E8EA;
+      border-left-color:var(--pastel-gold);
+    }
+    .addon-box h5,.terms-box h4{color:var(--pastel-plum)}
+    .addon-list{color:var(--pastel-muted)}
+    .product-enquiry-section{
+      border-top-color:rgba(168,121,147,.18);
+    }
+    .product-enquiry-btn,.give-review-btn,.download-pdf-btn{
+      background:var(--pastel-plum);
+      color:#fff;
+      box-shadow:none;
+    }
+    .product-enquiry-btn:hover,.give-review-btn:hover,.download-pdf-btn:hover{
+      background:#8a667d;color:#fff;box-shadow:0 6px 16px rgba(112,86,105,.15)
+    }
+    .category-gallery{border-top-color:rgba(168,121,147,.22);margin-top:18px;padding-top:14px}
+    .category-gallery h4{font-size:16px;color:var(--pastel-plum);margin-bottom:10px}
+    .category-gallery-grid{gap:8px}
+    .category-gallery-img{border-color:rgba(168,121,147,.25);border-radius:12px}
+    .important-notes h3,.note-title{color:var(--pastel-plum)}
+    .note-icon{background:#F1E1E6;color:var(--pastel-plum)}
+    .note-text,.about-us-content,.contact-text,.payment-text,.review-text{color:var(--pastel-text)}
+    .link-card,.dress-card,.review-card{background:#FFF9F4;border-color:rgba(168,121,147,.22)}
+    .link-name,.reviewer-name,.avg-rating{color:var(--pastel-plum)}
+    .link-description,.review-date{color:var(--pastel-muted)}
+    .footer{background:rgba(255,250,248,.96);border-top-color:rgba(168,121,147,.24)}
+    .footer-menu-link{color:var(--pastel-plum)}
+    .footer-menu-icon{color:var(--pastel-gold)}
+    .copyright-wrapper{color:var(--pastel-muted)}
+    /* Small service tagline badge */
+    .service-tagline{
+      display:inline-flex;align-items:center;justify-content:center;
+      max-width:100%;margin:4px auto 16px;padding:6px 10px;
+      border-radius:999px;background:#F1E2E7;border:1px solid rgba(168,121,147,.18);
+      color:var(--pastel-plum);font-size:10px;line-height:1.3;
+    }
+    @media(max-width:500px){
+      .firmname{font-size:28px}
+      .package-card-head{grid-template-columns:minmax(0,1fr) auto auto;gap:6px}
+      .package-card-head .card-title{font-size:14px}
+      .package-price{font-size:12px;padding:5px 9px}
+      .section-header{font-size:18px}
+    }
+
+  </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style id="v8-editorial-theme">
+
+:root{
+  --bg:#F4ECE6;--paper:#FFF9F4;--paper2:#F3E9E2;--forest:#4E3549;--forest2:#68495D;
+  --sage:#A9938E;--terracotta:#A85E72;--terracotta2:#C47A8E;--ink:#352D33;--muted:#776B70;
+  --line:#D9C9C1;--cream:#F6EBDD;--shadow:0 12px 34px rgba(38,60,52,.10);--r:20px;
+}
+html{scroll-behavior:smooth}body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+.page-wrapper{max-width:620px;background:linear-gradient(180deg,#F8F1EB,#EFE4DE);padding:18px 18px 110px;box-shadow:0 0 70px rgba(38,60,52,.10)}
+.views-top-left{top:10px;left:auto;right:10px;background:var(--forest);color:#f9f2e7;border:1px solid rgba(255,255,255,.18);padding:5px 9px;border-radius:999px;font-size:9px;box-shadow:0 5px 15px rgba(38,60,52,.18);font-family:"DM Sans",sans-serif}
+.views-top-left i{color:#D8A46F;margin-right:4px}.views-top-left b{color:#fff;text-shadow:none}
+.upper{margin:4px auto 12px;text-align:center;max-width:520px}
+.profile-pic-img{width:92px;height:92px;border-radius:50%;border:2px solid var(--terracotta);box-shadow:0 8px 20px rgba(38,60,52,.12);background:var(--cream);margin-bottom:9px}
+.firmname{font-family:"Cormorant Garamond",serif;font-size:43px;font-weight:700;letter-spacing:.5px;color:var(--forest);background:none;-webkit-text-fill-color:initial}
+.firmname-underline{height:1px;width:72px;background:var(--terracotta);margin:4px auto 6px}
+.name{font-size:14px;color:var(--forest);font-weight:600}.name span{font-size:10px;color:var(--terracotta);letter-spacing:1.5px;text-transform:uppercase}
+.service-tagline{display:block;width:fit-content;max-width:100%;margin:8px auto 13px;padding:5px 9px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--muted);font-size:9px;line-height:1.3}
+.round-contact-buttons{gap:7px;margin:12px 0 18px}.round-contact-buttons a{background:var(--paper);color:var(--forest);border:1px solid var(--line);box-shadow:0 3px 10px rgba(38,60,52,.05);padding:8px 13px;font-size:12px}.round-contact-buttons a:hover{transform:translateY(-2px);border-color:var(--terracotta);box-shadow:0 7px 16px rgba(38,60,52,.09)}
+.section-container,.important-notes{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:16px 17px;margin-bottom:15px;box-shadow:var(--shadow)}
+.section-header{font-family:"Cormorant Garamond",serif;font-size:24px;font-weight:700;color:var(--forest);background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;display:flex;align-items:center;gap:8px;padding:0 0 9px;margin:0 0 13px;letter-spacing:.2px}
+.contact-info-list{gap:10px}.contact-item{gap:10px}.contact-icon{width:34px;height:34px;border-radius:10px;background:var(--cream);color:var(--terracotta);font-size:15px}.contact-text{color:var(--ink);font-size:12px}
+.links-container{gap:8px}.link-card{background:var(--paper2);border:1px solid var(--line);border-radius:15px;padding:9px 11px;gap:11px}.link-card:hover{transform:translateX(3px);border-color:var(--terracotta)}.link-icon{width:40px;height:40px;border-radius:12px}.link-icon i{font-size:21px}.link-name{color:var(--forest);font-size:13px}.link-description{color:var(--muted);font-size:10px}
+.about-us-content{color:var(--ink);font-size:13px}.about-us-content p{margin-bottom:10px}.why-choose-us{margin-top:13px;background:var(--cream);border-left:3px solid var(--terracotta);border-radius:14px;padding:13px}.why-choose-us h3{color:var(--forest);font-family:"Cormorant Garamond",serif;font-size:20px}.why-choose-us li:before{color:var(--terracotta)}
+.accordion-category{margin-bottom:10px;border-radius:16px;background:var(--paper);border:1px solid var(--line);box-shadow:0 6px 18px rgba(38,60,52,.06)}
+.accordion-header{padding:12px 14px;background:linear-gradient(90deg,#F1E6DC,#FFF9F4);border:0}.category-title-wrap{gap:9px}.category-title-wrap i{font-size:20px;color:var(--terracotta);filter:none}.category-title-wrap h3{font-family:"Cormorant Garamond",serif;font-size:21px;color:var(--forest);background:none;-webkit-text-fill-color:initial}.accordion-toggle-icon{font-size:17px;color:var(--terracotta)}
+.accordion-content-packages{padding:0 12px}.accordion-content-packages.open{padding:8px 12px 15px}.package-grid-inside{gap:10px;margin-top:4px}
+.product-card{background:#FFFBF7;border:1px solid var(--line);border-radius:15px;padding:11px;box-shadow:0 5px 15px rgba(38,60,52,.05)}.product-card:hover{transform:none;border-color:var(--sage);box-shadow:0 8px 20px rgba(38,60,52,.08)}
+.package-card-head{grid-template-columns:minmax(0,1fr) auto auto;gap:8px;padding:9px 10px;border-radius:11px;background:#F2E7DF;border:1px solid #DED0C5;margin-bottom:9px}.package-card-head .card-title{font-family:"DM Sans",sans-serif;font-size:14px;color:var(--forest)}.package-price{background:var(--forest);color:#FFF8F2;padding:5px 10px;border-radius:999px;font-size:12px}.package-head-icon{color:var(--terracotta);font-size:13px}
+.product-description,.feature-list li,.package-terms-box ul,.terms-box li{color:var(--ink);font-size:12px}.feature-list li:before{content:"\f058";font-family:"Font Awesome 6 Free";font-weight:900;color:var(--terracotta)}.addon-box,.package-terms-box,.terms-box{background:var(--cream);border-left:3px solid var(--terracotta);border-radius:12px;padding:11px}.addon-box h5,.terms-box h4,.package-terms-box h5{color:var(--forest);font-size:12px}.addon-list{color:var(--muted);font-size:11px}.product-enquiry-section{border-top-color:var(--line);padding-top:11px;margin-top:12px}.product-enquiry-btn,.give-review-btn,.download-pdf-btn{background:var(--forest);color:#FFF9F4;border-radius:999px;padding:9px 16px;font-size:12px;box-shadow:none}.product-enquiry-btn:hover,.give-review-btn:hover,.download-pdf-btn:hover{background:var(--terracotta);color:#fff}.category-gallery{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}.category-gallery h4{font-size:15px;color:var(--forest);margin-bottom:9px}.category-gallery-grid{gap:7px}.category-gallery-img{border:1px solid var(--line);border-radius:10px}
+.important-notes{background:var(--paper)}.important-notes h3{font-family:"Cormorant Garamond",serif;font-size:24px;color:var(--forest);margin-bottom:10px}.notes-grid{gap:7px}.note-item{gap:10px;padding:8px 0;border-bottom:1px solid #E5D8D1}.note-icon{width:32px;height:32px;border-radius:9px;background:var(--cream);color:var(--terracotta);font-size:14px}.note-text{font-size:11px;color:var(--ink)}
+.dress-accordion{margin:15px 0;border-radius:16px;background:var(--paper);border:1px solid var(--line)}.dress-accordion-header{padding:13px 15px;background:#F1E6DC}.dress-accordion-header h3{font-family:"Cormorant Garamond",serif;font-size:21px;color:var(--forest);background:none;-webkit-text-fill-color:initial}.dress-accordion-header i:first-child{color:var(--terracotta);font-size:20px}.dress-card{background:#FFFBF7;border-color:var(--line);border-radius:13px}.dress-color{color:var(--forest);font-size:11px}
+.payment-list{gap:8px}.payment-item{gap:10px;padding:9px 0;border-bottom-color:var(--line)}.payment-text{color:var(--ink);font-size:12px}.payment-number{color:var(--terracotta);font-size:13px}
+.review-card{background:var(--paper2);border-color:var(--line);border-radius:15px;padding:13px}.reviewer-name,.avg-rating{color:var(--forest)}.review-text{color:var(--ink);font-size:12px}.review-source{color:var(--terracotta)}.review-rating,.rating-stars{color:#b88643}.google-rating-badge{background:#F1E9DF;border-color:var(--line)}
+#enquiry-section form input,#enquiry-section form select,#enquiry-section form textarea{background:#FFFBF7!important;color:var(--ink)!important;border:1px solid var(--line)!important;border-radius:11px!important;padding:10px 11px!important;font:inherit;font-size:12px!important}#enquiry-section form input:focus,#enquiry-section form select:focus,#enquiry-section form textarea:focus{border-color:var(--terracotta)!important;outline:none;box-shadow:0 0 0 3px rgba(184,109,85,.10)}
+.copy-link-wrapper{background:var(--cream);border:1px solid var(--line);border-radius:999px;color:var(--forest);font-size:11px}.shadow-button{background:var(--forest);border:0;color:#FFF9F4;border-radius:999px;padding:9px 16px}.shadow-button:hover{background:var(--terracotta)}
+.footer{background:rgba(38,60,52,.97);border-top:0;box-shadow:0 -8px 24px rgba(38,60,52,.16)}.footer-menu-link{color:#E8DDD7}.footer-menu-icon{color:#D8A46F}.footer-menu-link:hover{color:#fff}.copyright-wrapper{color:var(--muted);font-size:10px}
+#about-us-section img{display:none!important}
+@media(max-width:500px){.page-wrapper{padding:14px 12px 108px}.firmname{font-size:37px}.section-header{font-size:22px}.category-title-wrap h3{font-size:19px}.package-card-head .card-title{font-size:13px}.package-price{font-size:11px;padding:5px 8px}.round-contact-buttons{gap:6px}.round-contact-buttons a{padding:7px 10px;font-size:11px}}
+
+/* ===== ENQUIRY FORM ALIGNMENT REFINEMENT ===== */
+#enquiry-section form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px 14px !important;
+  align-items:start;
+}
+#enquiry-section form > label{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  gap:5px;
+  font-size:12px !important;
+  color:var(--muted) !important;
+  font-weight:600;
+}
+#enquiry-section form > label:nth-of-type(1),
+#enquiry-section form > label:nth-of-type(2){
+  grid-column:span 1;
+}
+#enquiry-section form > label:nth-of-type(3),
+#enquiry-section form > label:nth-of-type(4){
+  grid-column:span 1;
+}
+#enquiry-section form > label:nth-of-type(5){
+  grid-column:1 / -1;
+}
+#enquiry-section form > label:nth-of-type(6){
+  grid-column:1 / -1;
+}
+#enquiry-section form input,
+#enquiry-section form select,
+#enquiry-section form textarea{
+  width:100%;
+  min-height:42px;
+  margin:0 !important;
+  display:block;
+  font-family:"DM Sans",sans-serif !important;
+  font-size:12px !important;
+  line-height:1.35;
+  color:var(--ink) !important;
+  background:#FFFBF7 !important;
+  border:1px solid var(--line) !important;
+  border-radius:11px !important;
+  padding:10px 12px !important;
+  box-sizing:border-box;
+}
+#enquiry-section form select{
+  appearance:auto;
+  cursor:pointer;
+}
+#enquiry-section form textarea{
+  min-height:100px;
+  resize:vertical;
+}
+#enquiry-section form input::placeholder,
+#enquiry-section form textarea::placeholder{
+  color:#a09b92;
+}
+#enquiry-section form input:focus,
+#enquiry-section form select:focus,
+#enquiry-section form textarea:focus{
+  border-color:var(--terracotta) !important;
+  outline:none;
+  box-shadow:0 0 0 3px rgba(184,109,85,.10);
+}
+#enquiry-section form .product-enquiry-btn{
+  grid-column:1 / -1;
+  width:100%;
+  min-height:44px;
+  justify-content:center;
+  margin-top:2px;
+}
+#enquiry-section #enqStatus{
+  grid-column:1 / -1;
+  text-align:center;
+  min-height:18px;
+  line-height:1.4;
+}
+@media(max-width:500px){
+  #enquiry-section form{
+    grid-template-columns:1fr;
+    gap:10px !important;
+  }
+  #enquiry-section form > label,
+  #enquiry-section form > label:nth-of-type(5),
+  #enquiry-section form > label:nth-of-type(6),
+  #enquiry-section form .product-enquiry-btn,
+  #enquiry-section #enqStatus{
+    grid-column:1 / -1;
+  }
+}
+
+</style>
+
+<style id="proshot-light-blue-final">
+:root{
+  --bg:#eaf6fc !important;
+  --paper:#ffffff !important;
+  --paper2:#f3faff !important;
+  --forest:#285a73 !important;
+  --forest2:#397b99 !important;
+  --sage:#9fc9dc !important;
+  --terracotta:#55a6ca !important;
+  --terracotta2:#78bddb !important;
+  --ink:#294452 !important;
+  --muted:#6f8793 !important;
+  --line:#cfe5ef !important;
+  --cream:#e5f4fb !important;
+}
+
+body{
+  background:linear-gradient(180deg,#eaf6fc 0%,#dff1f9 50%,#f4faff 100%) !important;
+  color:#294452 !important;
+}
+
+.page-wrapper{
+  background:linear-gradient(180deg,#ffffff 0%,#eef8fc 100%) !important;
+  box-shadow:0 0 70px rgba(67,145,180,.16) !important;
+}
+
+.views-top-left{
+  background:#285a73 !important;
+  color:#ffffff !important;
+  border-color:#8ec7df !important;
+  box-shadow:0 5px 15px rgba(40,90,115,.20) !important;
+}
+.views-top-left i,.views-top-left b{color:#c7ebf8 !important;text-shadow:none !important}
+
+.profile-pic-img{
+  border-color:#6db8d7 !important;
+  box-shadow:0 8px 24px rgba(61,143,180,.22) !important;
+  background:#e7f5fb !important;
+}
+
+.firmname,.name{color:#285a73 !important}
+.firmname-underline{background:#65b4d5 !important}
+.name span{color:#4d9fc2 !important}
+
+.service-tagline{
+  background:#edf8fc !important;
+  border-color:#c5e2ee !important;
+  color:#537384 !important;
+}
+
+.round-contact-buttons a{
+  background:#ffffff !important;
+  color:#285a73 !important;
+  border-color:#c5e2ee !important;
+  box-shadow:0 3px 12px rgba(67,145,180,.10) !important;
+}
+.round-contact-buttons a:hover{
+  border-color:#65b4d5 !important;
+  box-shadow:0 7px 18px rgba(67,145,180,.16) !important;
+}
+
+.section-container,.important-notes{
+  background:rgba(255,255,255,.96) !important;
+  border-color:#cfe5ef !important;
+  box-shadow:0 8px 26px rgba(67,145,180,.10) !important;
+}
+
+.section-header{
+  color:#285a73 !important;
+  background:#e8f5fb !important;
+  border-bottom-color:#cfe5ef !important;
+  border-left-color:#65b4d5 !important;
+}
+
+.accordion-category,.dress-accordion{
+  background:#ffffff !important;
+  border-color:#c9e2ed !important;
+  box-shadow:0 6px 18px rgba(67,145,180,.08) !important;
+}
+
+.accordion-header,.dress-accordion-header{
+  background:linear-gradient(90deg,#e4f3fa,#ffffff) !important;
+}
+.category-title-wrap i,
+.accordion-toggle-icon,
+.dress-accordion-header i:first-child{
+  color:#4fa5c9 !important;
+}
+.category-title-wrap h3,.dress-accordion-header h3{
+  color:#285a73 !important;
+  background:none !important;
+  -webkit-text-fill-color:initial !important;
+}
+
+.product-card,.dress-card,.review-card,.link-card{
+  background:#fbfeff !important;
+  border-color:#cfe5ef !important;
+  box-shadow:0 5px 16px rgba(67,145,180,.07) !important;
+}
+.product-card:hover,.dress-card:hover,.review-card:hover{
+  border-color:#79bdd8 !important;
+  box-shadow:0 8px 22px rgba(67,145,180,.13) !important;
+}
+
+.package-card-head{
+  background:#e9f6fb !important;
+  border-color:#cfe5ef !important;
+}
+.package-card-head .card-title,
+.card-title,
+.reviewer-name,.avg-rating,
+.link-name{
+  color:#285a73 !important;
+}
+.package-price{
+  background:#397b99 !important;
+  color:#ffffff !important;
+}
+.package-head-icon{color:#55a6ca !important}
+
+.product-description,.feature-list li,.package-terms-box ul,.terms-box li,
+.note-text,.about-us-content,.contact-text,.payment-text,.review-text{
+  color:#3f5966 !important;
+}
+.feature-list li:before{color:#55a6ca !important}
+
+.addon-box,.package-terms-box,.terms-box,.why-choose-us{
+  background:#edf8fc !important;
+  border-left-color:#65b4d5 !important;
+}
+.addon-box h5,.terms-box h4,.package-terms-box h5,.why-choose-us h3{
+  color:#285a73 !important;
+}
+.addon-list,.link-description,.review-date,.copyright-wrapper{
+  color:#718995 !important;
+}
+
+.product-enquiry-btn,.give-review-btn,.download-pdf-btn,.shadow-button{
+  background:#397b99 !important;
+  color:#ffffff !important;
+}
+.product-enquiry-btn:hover,.give-review-btn:hover,.download-pdf-btn:hover,.shadow-button:hover{
+  background:#55a6ca !important;
+  color:#ffffff !important;
+  box-shadow:0 6px 18px rgba(67,145,180,.20) !important;
+}
+
+.category-gallery{
+  border-top-color:#cfe5ef !important;
+}
+.category-gallery h4,.important-notes h3,.note-title{
+  color:#285a73 !important;
+}
+.category-gallery-img{
+  border-color:#c6e2ed !important;
+}
+.note-icon,.contact-icon{
+  background:#e5f4fb !important;
+  color:#4fa5c9 !important;
+}
+
+.payment-number,.review-source{
+  color:#4f9fc1 !important;
+}
+
+.google-rating-badge{
+  background:#eef7fb !important;
+  border-color:#cfe5ef !important;
+}
+
+.copy-link-wrapper{
+  background:#e8f5fb !important;
+  border-color:#c7e2ed !important;
+  color:#285a73 !important;
+}
+
+.footer{
+  background:rgba(40,90,115,.98) !important;
+  border-top:0 !important;
+  box-shadow:0 -8px 24px rgba(40,90,115,.18) !important;
+}
+.footer-menu-link{color:#eaf8fd !important}
+.footer-menu-icon{color:#aee0f1 !important}
+.footer-menu-link:hover{color:#ffffff !important}
+
+#enquiry-section form input,
+#enquiry-section form select,
+#enquiry-section form textarea{
+  background:#ffffff !important;
+  color:#294452 !important;
+  border-color:#cfe5ef !important;
+}
+#enquiry-section form input:focus,
+#enquiry-section form select:focus,
+#enquiry-section form textarea:focus{
+  border-color:#55a6ca !important;
+  box-shadow:0 0 0 3px rgba(85,166,202,.14) !important;
+}
+</style>
+
+
+<style id="service-round-rect-neon-final">
+/* SERVICES: each item in its own rounded rectangle */
+.service-tagline {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 10px auto 14px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  color: inherit !important;
+}
+
+.service-tagline .service-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 38px !important;
+  padding: 8px 14px !important;
+  border-radius: 12px !important;
+  background: #ffffff !important;
+  color: #285a73 !important;
+  border: 1px solid #b9ddeb !important;
+  box-shadow: 0 4px 12px rgba(40,90,115,.10) !important;
+  font-family: "DM Sans", sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+  transition: all .22s ease !important;
+}
+
+/* Dark neon hover */
+.service-tagline .service-pill:hover {
+  background: #111439 !important;
+  color: #62ddff !important;
+  border-color: #62ddff !important;
+  box-shadow:
+    0 0 6px rgba(98,221,255,.95),
+    0 0 16px rgba(98,221,255,.78),
+    0 0 30px rgba(98,221,255,.48) !important;
+  transform: translateY(-3px) !important;
+}
+
+.service-tagline .service-pill:active {
+  transform: translateY(-1px) scale(.98) !important;
+}
+
+@media (max-width: 500px) {
+  .service-tagline {
+    gap: 7px !important;
+  }
+  .service-tagline .service-pill {
+    min-height: 36px !important;
+    padding: 8px 11px !important;
+    font-size: 10px !important;
+    border-radius: 11px !important;
+  }
+}
+</style>
+
+
+<style id="buttons-neon-only-final">
+/* SERVICE BOXES: NO NEON EFFECT */
+.service-tagline .service-pill,
+.service-tagline .service-pill:hover,
+.service-tagline .service-pill:active {
+  box-shadow: none !important;
+  transform: none !important;
+  background: #ffffff !important;
+  color: #285a73 !important;
+  border-color: #c5e2ee !important;
+}
+
+/* ACTION / CONTACT BUTTONS: neon only on hover */
+.round-contact-buttons a,
+.product-enquiry-btn,
+.give-review-btn,
+.download-pdf-btn,
+.shadow-button {
+  transition:
+    background .22s ease,
+    color .22s ease,
+    border-color .22s ease,
+    box-shadow .22s ease,
+    transform .22s ease !important;
+}
+
+.round-contact-buttons a:hover,
+.product-enquiry-btn:hover,
+.give-review-btn:hover,
+.download-pdf-btn:hover,
+.shadow-button:hover {
+  background: #111439 !important;
+  color: #62ddff !important;
+  border-color: #62ddff !important;
+  box-shadow:
+    0 0 6px rgba(98,221,255,.95),
+    0 0 16px rgba(98,221,255,.78),
+    0 0 30px rgba(98,221,255,.48) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Enquiry button is full width; keep its existing layout */
+#enquiry-section form .product-enquiry-btn:hover {
+  width: 100% !important;
+  justify-content: center !important;
+}
+</style>
+
+
+<style id="proshot-contact-contrast">
+/* Stronger contrast for Contact Info only */
+.contact-info-list .contact-text,
+.contact-info-list .contact-text a {
+  color: #285a73 !important;
+  font-weight: 600 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+.contact-info-list .contact-text a:hover {
+  color: #1d4a61 !important;
+}
+
+.contact-info-list .contact-icon {
+  color: #2f8fb8 !important;
+  background: #e0f2fa !important;
+  border: 1px solid #c3e4f1 !important;
+}
+
+.contact-info-list .contact-item {
+  opacity: 1 !important;
+}
+</style>
+
+
+
+<style id="crafted-created-footer-style">
+  .copyright-wrapper a{
+    color:#285a73 !important;
+    font-weight:700 !important;
+    text-decoration:none !important;
+  }
+  .copyright-wrapper a:hover{
+    color:#1d4a61 !important;
+    text-decoration:underline !important;
+  }
+</style>
+
+</head>
+<body>
+<div class="views-top-left" id="counter1"><i class="fas fa-bolt"></i> Views: <b id="counter"></b></div>
+<div class="page-wrapper" id="home-section">
+  <div class="upper">
+    <img src="https://instagram.fnag1-4.fna.fbcdn.net/v/t51.82787-19/815267761_18012948989952922_5167172411091452395_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ig_cache_key=GLH-lzCaQ_eBrv4-AOsBTljue7VHbmNDAQAB0j-ccb7-5&ccb=7-5&_nc_sid=669407&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=gN2z2Zrl-XMQ7kNvwHHQYbx&_nc_oc=Adrreot4Az7m3hDYjvIzL5_GWmgvbNXx2TlsE9eaKC1AZdHVfKHrtOnS2Y-lT2h-t5k4YHYjOEhkuA_XpCu6yNkT&_nc_zt=24&_nc_ht=instagram.fnag1-4.fna&_nc_gid=POlBlSS_lJxYZpcdjREsUg&_nc_ss=7b6a8&oh=00_AQQVLFd9WnjGKoIWsRswsUcPXkUO3_Kqxx19IV9JlSJlNw&oe=6AED54BA" class="profile-pic-img" alt="Proshot Pixel Instagram profile photo" referrerpolicy="no-referrer">
+    <div class="firmname">PROSHOT PIXEL</div>
+    <div class="firmname-underline"></div>
+    <div class="name">Vrushali Patil <span style="display:block; margin-top:6px;"><i>📸 Visual Storyteller</i></span></div>
+    <div class="service-tagline">
+<span class="service-pill">Maternity</span>
+<span class="service-pill">Newborn</span>
+<span class="service-pill">Family</span>
+<span class="service-pill">Pre-Birthday</span>
+<span class="service-pill">Baby</span>
+<span class="service-pill">Model &amp; Portrait Photography</span>
+</div>
+  </div>
+  <div class="round-contact-buttons">
+    <a href="tel:+918855003875"><i class="fas fa-phone"></i><span>Call Me</span></a>
+    <a href="https://wa.me/918855003875?text=Hi%20Proshot%20Pixel"><i class="fab fa-whatsapp"></i><span>Whatsapp</span></a>
+     <a target="_blank" href="https://www.google.com/maps/dir//Proshot+Pixel,+Pimprigaon+Rd,+opp.+NAV+MAHARASHTRA+VIDYALAYA,+Pune"><i class="fas fa-map-marker-alt"></i><span>Direction</span></a>
+    <a href="mailto:proshotpixel@gmail.com"><i class="fas fa-envelope"></i><span>Mail</span></a>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="section-container">
+    <h2 class="section-header">⚡ CONTACT US ⚡</h2>
+    <div class="contact-info-list">
+      <div class="contact-item"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div class="contact-text"> Pimprigaon Rd, opp. NAV MAHARASHTRA VIDYALAYA & JUNIOR COLLEGE, Shastri Nagar, Pimpri Colony, Pimpri-Chinchwad, Pune, Maharashtra 411017</div></div>
+      <div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div class="contact-text"><a href="mailto:proshotpixel@gmail.com">proshotpixel@gmail.com</a></div></div>
+      <div class="contact-item"><div class="contact-icon"><i class="fas fa-phone"></i></div><div class="contact-text"><a href="tel:+918855003875">+91-8855003875</a></div></div>
+    </div>
+  </div>
+
+  <!-- Social Links -->
+  <div class="section-container" id="links-section">
+    <h2 class="section-header">🔗 CONNECT WITH US 🔗</h2>
+    <div class="links-container">
+      <a href="https://wa.me/918855003875" target="_blank" class="link-card whatsapp-card"><div class="link-icon"><i class="fab fa-whatsapp"></i></div><div class="link-details"><div class="link-name">WhatsApp</div><div class="link-description">Bookings & inquiries</div></div><div class="link-arrow"><i class="fas fa-external-link-alt"></i></div></a>
+      <a href="https://www.instagram.com/proshot_pixel_by_vrushali/" target="_blank" class="link-card instagram-card"><div class="link-icon"><i class="fab fa-instagram"></i></div><div class="link-details"><div class="link-name">Instagram</div><div class="link-description">Portfolio & stories</div></div><div class="link-arrow"><i class="fas fa-external-link-alt"></i></div></a>
+      <a href="https://www.facebook.com/profile.php?id=100091971216082" target="_blank" class="link-card facebook-card"><div class="link-icon"><i class="fab fa-facebook-f"></i></div><div class="link-details"><div class="link-name">Facebook</div><div class="link-description">Follow our updates</div></div><div class="link-arrow"><i class="fas fa-external-link-alt"></i></div></a>
+     <!-- <a href="http://justdial.com" target="_blank" class="link-card justdial-card"><div class="link-icon"><i class="fas fa-building"></i></div><div class="link-details"><div class="link-name">Justdial</div><div class="link-description">Find us on Justdial</div></div><div class="link-arrow"><i class="fas fa-external-link-alt"></i></div></a>-->
+      <a href="tel:+918855003875" class="link-card phone-card"><div class="link-icon"><i class="fas fa-phone-alt"></i></div><div class="link-details"><div class="link-name">Direct Call</div><div class="link-description">Talk to Vrushali</div></div><div class="link-arrow"><i class="fas fa-external-link-alt"></i></div></a>
+    </div>
+  </div>
+
+  <!-- About Us Section -->
+  <div class="section-container" id="about-us-section">
+    <h2 class="section-header">📖 ABOUT US 📖</h2>
+    <div class="about-us-content">
+      <p>We specialize in capturing moments that last a lifetime.
+Through beautiful, timeless photography, we preserve your most precious memories.
+With over 500+ successful shoots, we bring experience and creativity to every session.
+From professional portraits to maternity, newborn, pre-birthday, baby, model, and family shoots — we cover it all.</p>
+      
+       <p>We bring your unique stories to life with passion and attention to detail. </p>
+      <p>Based in Pimpri, we proudly offer our services across Pune and nearby areas.</p>
+      <div class="why-choose-us"><h3>✨ Why Choose Us ✨</h3><ul><li>Expertise in Maternity, Baby, Newborn, Family, Model & Pre-Birthday Photography</li> <li>Personalized Approach — We listen, we understand, and we provide the best solutions</li></ul></div>
+     <br> <p><strong>We believe photography is more than just pictures — it's about preserving memories, emotions, and stories that you'll cherish forever.</strong></p>
+    </div>
+  </div>
+
+  <!-- EXCLUSIVE PACKAGES SECTION -->
+  <div class="section-container" id="packages-section">
+    <h2 class="section-header">📸 OUR EXCLUSIVE PACKAGES 📸</h2>
+    
+  </div>
+<div id="packages-container-accordion"></div>
+
+  <!-- IMPORTANT NOTES SECTION (Updated with 11 specific points) -->
+  <div class="important-notes"  id="terms-section">
+    <h3><i class="fas fa-circle-info"></i> Important Notes</h3>
+    <div class="notes-grid">
+      <div class="note-item">
+        <div class="note-icon"><i class="fas fa-database"></i></div>
+        <div class="note-content">
+          <div class="note-text">Please download your raw and edited data within 8 days. We will not be responsible after data closure.</div>
+        </div>
+      </div>
+      <div class="note-item">
+        <div class="note-icon"><i class="fas fa-rupee-sign"></i></div>
+        <div class="note-content">
+          <div class="note-text">Advance booking payment is needed, and the remaining payment should be cleared on the shoot day.</div>
+        </div>
+      </div>
+      <div class="note-item">
+        <div class="note-icon"><i class="fas fa-shoe-prints"></i></div>
+        <div class="note-content">
+          <div class="note-text">Please carry clean shoes in your bag for use inside the studio only.</div>
+        </div>
+      </div>
+      <div class="note-item">
+        <div class="note-icon"><i class="fas fa-gem"></i></div>
+        <div class="note-content">
+          <div class="note-text">Please carry suitable jewellery, as we provide only makeup and hairstyling.</div>
+        </div>
+      </div>
+      <div class="note-item">
+        <div class="note-icon"><i class="fas fa-clock"></i></div>
+        <div class="note-content">
+          <div class="note-text">Clients are requested to be on time; a delay of 15–20 minutes is acceptable, but any further delay will result in reduced shoot time.</div>
+        </div>
+      </div>
+      <div class="note-item">
+        <div class="note-icon"><i class="fas fa-utensils"></i></div>
+        <div class="note-content">
+          <div class="note-text">Soft drink and food is not allowed in studio & during shoot.</div>
+        </div>
+      </div>
+      <div class="note-item">
+        <div class="note-icon"><i class="fas fa-child"></i></div>
+        <div class="note-content">
+          <div class="note-text">Please take care of your child during the shoot, and kindly do not mess with the beautiful sets.</div>
+        </div>
+      </div>
+      <div class="note-item">
+        <div class="note-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+        <div class="note-content">
+          <div class="note-text">Raw data will be provided on the same day of the shoot, and edited photos will be delivered within 10 days after selection.</div>
+        </div>
+      </div>
+      <div class="note-item">
+        <div class="note-icon"><i class="fas fa-users-slash"></i></div>
+        <div class="note-content">
+          <div class="note-text">Extra members are not allowed in the studio.</div>
+        </div>
+      </div>
+      <div class="note-item">
+        <div class="note-icon"><i class="fas fa-bag-shopping"></i></div>
+        <div class="note-content">
+          <div class="note-text">Clients are requested to take care of their belongings during a shoot. No staff/photographer would be responsible for any loss.</div>
+        </div>
+      </div>
+      <div class="note-item">
+        <div class="note-icon"><i class="fas fa-image"></i></div>
+        <div class="note-content">
+          <div class="note-text">Edited photos do not include background changes as we already provide premium sets; only one photo can be edited with a background change or AI editing.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- DRESS COLLECTION - ACCORDION + 3 COLUMN GRID -->
+  <div id="dresses-section">
+    <div class="dress-accordion">
+      <div class="dress-accordion-header" id="dressAccordionHeader">
+        <h3><i class="fas fa-tshirt"></i> 👗 OUR DRESS COLLECTION 👗</h3>
+        <div class="accordion-toggle-icon"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <div class="dress-accordion-content" id="dressAccordionContent">
+        <div class="dresses-gallery-grid" id="dressesGallery"></div>
+        <div style="text-align: center; margin-top: 12px;">
+          <a class="download-pdf-btn" id="downloadDressPdfBtn" href="https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/Proshot Pixel Outfits.pdf"><i class="fas fa-file-pdf"></i> Download Dress PDF Catalog</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <!-- Payment Options -->
+  <div class="section-container">
+    <h2 class="section-header">💳 PAYMENT 💳</h2>
+    <div class="payment-list">
+      <div class="payment-item"><i class="fab fa-paypal paytm-icon"></i><span class="payment-text">Paytm</span><span class="payment-number">+91-8855003875</span></div>
+      <div class="payment-item"><i class="fas fa-mobile-alt phonepe-icon"></i><span class="payment-text">PhonePe</span><span class="payment-number">+91-8855003875</span></div>
+      <div class="payment-item"><i class="fab fa-google-pay gpay-icon"></i><span class="payment-text">Google Pay</span><span class="payment-number">+91-8855003875</span></div>
+    </div>
+  </div>
+<!-- ENQUIRY SECTION -->
+  <div class="section-container" id="enquiry-section">
+    <h2 class="section-header"><i class="fas fa-paper-plane"></i> ENQUIRE NOW</h2>
+    <form id="enquiryForm" style="display:grid;gap:12px;">
+      <label style="font-size:12px;color:var(--pastel-muted);">Full Name *
+        <input id="enqName" required placeholder="Your name">
+      </label>
+      <label style="font-size:12px;color:var(--pastel-muted);">Mobile Number *
+        <input id="enqPhone" required inputmode="tel" placeholder="10-digit mobile number">
+      </label>
+      <label style="font-size:12px;color:var(--pastel-muted);">Service *
+        <select id="enqService" required><option value="">Select service</option></select>
+      </label>
+      <label style="font-size:12px;color:var(--pastel-muted);">Package *
+        <select id="enqPackage" required disabled><option value="">Select service first</option></select>
+      </label>
+      <label style="font-size:12px;color:var(--pastel-muted);">Preferred Date
+        <input id="enqDate" type="date">
+      </label>
+      <label style="font-size:12px;color:var(--pastel-muted);">Message
+        <textarea id="enqMessage" rows="4" placeholder="Tell us about your requirements"></textarea>
+      </label>
+      <button type="submit" class="product-enquiry-btn"><i class="fab fa-whatsapp"></i> Send Enquiry on WhatsApp</button>
+      <div id="enqStatus" style="font-size:12px;color:var(--pastel-muted);"></div>
+    </form>
+  </div>
+
+<!-- REVIEWS SECTION (New) -->
+  <div class="section-container" id="reviews-section">
+  <h2 class="section-header">⭐ CUSTOMER REVIEWS ⭐</h2>
+  <div id="reviewsContainer" class="reviews-container">
+    <div class="review-loading"><i class="fas fa-spinner fa-pulse"></i> Loading reviews...</div>
+  </div>
+  <div style="display: flex; justify-content: center; gap: 16px; margin-top: 20px; flex-wrap: wrap;">
+    <a href="https://g.page/r/CVEli6gLezMpEAE/review" target="_blank" class="give-review-btn" id="giveReviewBtn">
+      <i class="fab fa-google"></i> Write a Review on Google
+    </a>
+    <a href="https://www.google.com/maps/place/Proshot+Pixel/@18.6114189,73.7996343,17z/data=!4m8!3m7!1s0x3bc2b922dc91c4f9:0x29337b0ba88b2551!8m2!3d18.6114189!4d73.8022092!9m1!1b1!16s%2Fg%2F11svkkz9dv?entry=ttu&g_ep=EgoyMDI2MDQwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="give-review-btn" style="background: linear-gradient(95deg, #B97A8F, #7A506B);">
+      <i class="fas fa-eye"></i> Click to view more Reviews
+    </a>
+  </div>
+</div>
+  
+  <!-- Share Section -->
+ <div class="section-container" id="share-section">
+  <h2 class="section-header">🌊 SHARE THE MOMENT 🌊</h2>
+  <div class="copy-link-wrapper" id="copyLinkBtn">
+    <span>https://proshotpixel-source.github.io/ProshotPixel/</span>
+    <i class="fas fa-copy"></i>
+  </div>
+  <div class="qr-code-wrapper">
+    <img src="https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/QR/ppqr.jpeg" class="qr-code-image" alt="qr">
+  </div>
+  <div class="shadow-buttons" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
+    <a class="shadow-button" id="shareNowBtn" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 24px;">
+      <i class="fas fa-share-alt"></i> Share
+    </a>
+    <a class="shadow-button" id="saveQrBtn" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 24px;">
+      <i class="fas fa-download"></i> Save QR
+    </a>
+  </div>
+</div> <div class="copyright-wrapper">
+  © 2026 PROSHOT PIXEL<br>
+  Digital Card Crafted by
+  <a href="https://wa.me/918446520866?text=Hi%2C%20I%20am%20interested%20in%20creating%20a%20professional%20digital%20business%20card%20just%20like%20this.%20Please%20share%20the%20details%20and%20pricing." target="_blank" rel="noopener noreferrer" style="color:#285a73;font-weight:700;text-decoration:none;">
+    +91 8446520866
+  </a>
+</div>
+</div>
+
+<div class="footer"><ul class="footer-menu"><li><a href="#home-section" class="footer-menu-link"><i class="fas fa-home footer-menu-icon"></i><span>HOME</span></a></li><li><a href="#about-us-section" class="footer-menu-link"><i class="fas fa-info-circle footer-menu-icon"></i><span>ABOUT</span></a></li><li><a href="#packages-section" class="footer-menu-link"><i class="fas fa-box-open footer-menu-icon"></i><span>PACKAGES</span></a></li><li><a href="#dresses-section" class="footer-menu-link"><i class="fas fa-tshirt footer-menu-icon"></i><span>DRESSES</span></a></li><li><a href="#reviews-section" class="footer-menu-link"><i class="fas fa-star footer-menu-icon"></i><span>REVIEWS</span></a></li><li><a href="#enquiry-section" class="footer-menu-link"><i class="fas fa-paper-plane footer-menu-icon"></i><span>ENQUIRY</span></a></li><li><a href="#links-section" class="footer-menu-link"><i class="fas fa-link footer-menu-icon"></i><span>LINKS</span></a></li><li><a href="#share-section" class="footer-menu-link"><i class="fas fa-share-alt footer-menu-icon"></i><span>SHARE</span></a></li></ul></div>
+
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <button class="modal-nav-btn prev-btn" id="modalPrevBtn"><i class="fas fa-chevron-left"></i></button>
+  <img class="modal-content" id="modalImg">
+  <div class="modal-caption" id="modalCaption"></div>
+  <button class="modal-nav-btn next-btn" id="modalNextBtn"><i class="fas fa-chevron-right"></i></button>
+</div>
+
+<script type="module">
+ 
+
+  // Sample reviews data
+  const sampleReviews = [
+    {
+      name: "Niketa Bagul",
+      rating: 5,
+      text: "We had an amazing experience working with Proshot Pixel by Vrushali. Her attention to detail, creativity, and ability to capture genuine moments made the entire session feel effortless and fun. The photos turned out absolutely stunning – every shot was beautifully composed and edited to perfection. Vrushali is incredibly professional, friendly, patient and made us feel comfortable throughout the shoot. I highly recommend Proshot Pixel to anyone looking for breathtaking photos and a fantastic experience!",
+      //date: "2 weeks ago",
+      source: "Google"
+    },
+    {
+      name: "Nikita Darote Pawar",
+      rating: 5,
+      text: "We had a wonderful experience with Proshot Pixel by Vrushali for our maternity photoshoot! Vrushali's professionalism and creativity were evident throughout the session. She made us feel so comfortable and captured the most precious moments with such beauty and precision. The lighting, composition, and attention to detail in every shot were exceptional. The final edited photos exceeded our expectations, and we will cherish them forever. Highly recommend Vrushali for anyone looking to create lasting memories!",
+      //date: "1 month ago",
+      source: "Google"
+    },
+    {
+      name: "Akanksha Udakhe",
+      rating: 5,
+      text: "Best photographer in Pimpri Chinchwad. She is very sweet humble punctual and creative. Makeup artist is also very nice helpful and did perfect natural makeup as I want. They both won't say no to anything. Quick response on our messages and shared photographs on same day. ❤️",
+      //date: "3 weeks ago",
+      source: "Google"
+    },
+    {
+      name: "Srushti Joshi",
+      rating: 5,
+      text: "I recently did a maternity shoot with Vrushali and am totally in love with the results. Vrushali is super lovely and very helpful, she makes you feel comfortable and makes the whole experience enjoyable. Plus she has some stunning gowns and definitely very pleasant studio. I am super happy with every single photo!",
+      //date: "2 months ago",
+      source: "Google"
+    }
+  ];
+
+  function renderReviews() {
+    const container = document.getElementById('reviewsContainer');
+    if (!container) return;
+    container.innerHTML = `<div class="google-rating-badge"><i class="fab fa-google"></i><span>Google Rating: <span class="avg-rating">5.0</span> ⭐ (Based on Google Reviews)</span></div>`;
+    sampleReviews.forEach(review => {
+      const stars = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
+      const reviewCard = document.createElement('div'); reviewCard.className = 'review-card';
+      reviewCard.innerHTML = `<div class="review-header"><span class="reviewer-name">${review.name}</span><span class="review-rating">${stars}</span></div><div class="review-text">"${review.text}"</div><div class="review-source"><i class="fab fa-google"></i> ${review.source} Review</div>`;
+      container.appendChild(reviewCard);
+    });
+  }
+
+  const dressImages = [
+  {url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/Storm Blue (1).jpg", color: "Storm Blue" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/Storm Blue (2).jpg", color: "Storm Blue" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/Mild Purple (1).jpg", color: "Mild Purple" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/Mild Purple (2).jpg", color: "Mild Purple" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/brown 2.jpeg", color: "Brown" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/brown 3.jpeg", color: "Brown" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/brown.jpg", color: "Brown" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/green 2.jpg", color: "Fairy Green" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/green 3.jpg", color: "Fairy Green" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/Rich Violet (1).jpg", color: "Rich Violet" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/Rich Violet (2).JPG", color: "Rich Violet" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/Rich Violet (3).jpg", color: "Rich Violet" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/red 2.jpg", color: "Red" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/red.jpg", color: "Red" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/Lavender outdoor.jpg", color: "Lavender" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/lavender.jpg", color: "Lavender" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/baby pink1.jpg", color: "Baby Pink" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/baby pink2.jpg", color: "Baby Pink" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/yellow 2.jpg", color: "Yellow" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/yellow.jpg", color: "Yellow" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/red bodycon 1.JPG", color: "Red Bodycon" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/red bodycon 2.jpg", color: "Red Bodycon" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/black bodycon.jpg", color: "Black" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/black longtail.jpg", color: "Black" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/black short.jpg", color: "Black" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/black.JPG", color: "Black" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/blue 1.jpg", color: "Blue" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/blue 2.jpg", color: "Blue" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/wine 1.jpg", color: "Wine" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/wine 2.JPG", color: "Wine" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/rose wine 1.jpg", color: "Rose Wine" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/rose wine 2.jpg", color: "Rose Wine" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/white 2.jpg", color: "White" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/white 3.jpg", color: "White" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/Royal Blue 2.jpg", color: "Royal Blue" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/royal blue.jpg", color: "Royal Blue" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/Lemon Yellow (1).jpg", color: "Lemon Yellow" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/Lemon Yellow (2).jpg", color: "Lemon Yellow" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/Lemon Yellow (3).jpg", color: "Lemon Yellow" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/light blue.jpg", color: "light blue" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/orange 1.jpg", color: "Orange" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/orange 2.JPG", color: "Orange" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/orange.jpg", color: "Orange" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/Bottle Green (1).jpg", color: "Bottle Green" },
+{url: "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/dress/Bottle Green (2).jpg", color: "Bottle Green" }
+];
+  let allGalleryImages = [];
+  let currentImageIndex = 0;
+
+  function buildDressesGallery() {
+    const container = document.getElementById('dressesGallery');
+    if (!container) return;
+    container.innerHTML = '';
+    dressImages.forEach((dress) => {
+      const card = document.createElement('div'); card.className = 'dress-card';
+      card.innerHTML = `<img src="${dress.url}" class="dress-image" alt="Dress"><div class="dress-info"><div class="dress-color">${dress.color}</div></div>`;
+      const globalIndex = allGalleryImages.length;
+      allGalleryImages.push({ url: dress.url, color: dress.color });
+      card.querySelector('.dress-image').onclick = () => {
+        currentImageIndex = globalIndex;
+        document.getElementById('modalImg').src = dress.url;
+        document.getElementById('modalCaption').innerText = dress.color;
+        document.getElementById('imageModal').style.display = 'flex';
+      };
+      container.appendChild(card);
+    });
+  }
+
+  // Category-specific gallery images (provided URLs)
+const categoryGalleries = {
+    maternity: [
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (1).jpeg", 
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (1).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (1).png",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (1).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (10).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (11).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (12).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (13).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (14).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (15).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (16).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (17).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (18).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (19).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (2).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (20).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (21).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (22).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (23).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (24).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (25).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (26).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (27).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (28).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (29).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (3).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (30).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (31).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (32).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (33).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (34).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (35).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (36).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (36).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (37).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (38).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (39).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (4).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (40).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (41).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (42).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (43).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (44).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (45).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (46).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (47).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (48).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (49).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (5).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (50).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (51).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (52).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (53).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (54).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (55).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (56).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (57).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (58).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (59).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (6).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (60).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (61).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (62).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (63).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (64).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (65).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (66).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (67).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (68).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (69).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (7).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (70).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (8).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/maternity/1 (9).jpg" ],
+    newborn: [
+     
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (1).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (1).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (10).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (11).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (12).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (13).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (14).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (15).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (16).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (17).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (18).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (19).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (2).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (2).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (20).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (21).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (22).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (23).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (24).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (25).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (26).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (27).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (3).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (3).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (30).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (31).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (4).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (4).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (5).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (6).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (6).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (7).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (8).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/newborn/1 (9).jpg"
+    ],
+    family: [
+ "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/family/1 (1).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/family/1 (10).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/family/1 (11).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/family/1 (12).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/family/1 (13).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/family/1 (14).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/family/1 (15).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/family/1 (16).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/family/1 (2).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/family/1 (3).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/family/1 (4).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/family/1 (5).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/family/1 (6).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/family/1 (7).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/family/1 (8).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/family/1 (9).jpg"  ],
+    prebirthday: [
+  "https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (1).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (1).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (3).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (2).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (4).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (16).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (6).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (10).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (11).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (12).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (13).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (14).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (15).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (17).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (18).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (19).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (2).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (20).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (21).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (22).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (23).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (24).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (25).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (26).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (27).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (28).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (29).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (3).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (30).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (31).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (32).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (33).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (34).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (35).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (36).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (37).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (38).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (39).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (4).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (5).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (5).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (6).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (7).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (7).webp",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (8).jpg",
+"https://raw.githubusercontent.com/proshotpixel-source/ProshotPixel/refs/heads/main/kids/1 (9).jpg" ]
+  };
+  const categoriesData = [
+    { id: "maternity", title: "🤰 Maternity Photoshoot", icon: "fas fa-person-pregnant", packages: [
+      {
+        name: "Basic Package",
+        price: "₹4,500",
+        duration: "",
+        outfit: "",
+        images: "",
+        features: [
+          "2 Gowns Included",
+          "Makeup & Hairstyle Included",
+          "20 Edited Photos"
+        ],
+        addons: [
+          "Reel: ₹1,000",
+          "Extra Gown: ₹1,000",
+          "Album: ₹1,500",
+          "Extra Edited Photo (Simple Edit): ₹50/photo",
+          "Extra Edited Photo (AI Edit): ₹250/photo",
+          "Western Jewellery: ₹200",
+          "Traditional Jewellery: ₹300",
+          "Extra Hairstyle: ₹500",
+          "Saree Draping: ₹200 / ₹300"
+        ]
+      },
+      {
+        name: "Premium Package",
+        price: "₹5,500",
+        duration: "",
+        outfit: "",
+        images: "",
+        features: [
+          "2 Gowns from Us",
+          "Makeup & Hairstyle Included",
+          "Traditional Change Allowed or Western Change (Outfit from Your Side)",
+          "25 Edited Photos"
+        ],
+        addons: [
+          "Reel: ₹1,000",
+          "Extra Gown: ₹1,000",
+          "Album: ₹1,500",
+          "Extra Edited Photo (Simple Edit): ₹50/photo",
+          "Extra Edited Photo (AI Edit): ₹250/photo",
+          "Western Jewellery: ₹200",
+          "Traditional Jewellery: ₹300",
+          "Extra Hairstyle: ₹500",
+          "Saree Draping: ₹200 / ₹300"
+        ]
+      },
+      {
+        name: "Advanced Package",
+        price: "₹7,000",
+        duration: "",
+        outfit: "",
+        images: "",
+        features: [
+          "3 Gowns Included",
+          "Makeup & Hairstyle Included",
+          "30 Edited Photos",
+          "1 Mini Album (30 Photos)",
+          "1 Reel Included (30–50 Seconds)"
+        ],
+        addons: [          
+          "Extra Gown: ₹1,000",
+          "Extra Edited Photo (Simple Edit): ₹50/photo",
+          "Extra Edited Photo (AI Edit): ₹250/photo",
+          "Western Jewellery: ₹200",
+          "Traditional Jewellery: ₹300",
+          "Extra Hairstyle: ₹500",
+          "Saree Draping: ₹200 / ₹300"
+        ]
+      },
+      {
+        name: "Luxury Package",
+        price: "₹11,000",
+        duration: "",
+        outfit: "",
+        images: "",
+        features: [
+          "35 Edited Photos",
+          "Makeup + 2 Hairstyles",
+          "3 Gowns + 1 Traditional Saree",
+          "1 Reel Included",
+          "1 Album (30 Photos)",
+          "Jewellery Included"
+        ],
+        addons: [         
+          "Extra Gown: ₹1,000",          
+          "Extra Edited Photo (Simple Edit): ₹50/photo",
+          "Extra Edited Photo (AI Edit): ₹250/photo",
+          "Western Jewellery: ₹200",
+          "Traditional Jewellery: ₹300",
+          "Extra Hairstyle: ₹500",
+          "Saree Draping: ₹200 / ₹300"
+        ]
+      }
+    ]},
+	{ id: "prebirthday", title: " Pre-Birthday Photoshoot", icon: "fas fa-birthday-cake", packages: [
+      { name: "Sweet Start (Indoor)", price: "₹4,000", duration: "", outfit: "", images: "", features: [" <strong> 1 Hour </strong>of Professional Photography","1 Themed Setup","<strong>15</strong> High-End Retouched Images","Make-up,Hairstyle,Gown for Mom & Reel are <strong>Not</strong> Included","Baby Solo + Family Photos",  "Guided Posing & Styling Assistance"], addons: [ "➕ Mom Outfit: ₹800", "➕ Makeup & Hairstyle (Mom): ₹1,200", "➕ Hairstyle Only: ₹600", "➕ Reel: ₹1000", "➕ Saree Drapping: ₹200"] },
+      { name: "Little Star (Indoor)", price: "₹5,500", duration: "", outfit: "",  images: "", features: [" <strong> 1 Hour </strong>of Professional Photography","2–3 Themed Setups","<strong>20</strong> High-End Retouched Images","Make-up,Hairstyle & Gown for Mom  are <strong>Not</strong> Included","Baby Solo + Family Photos + 1 Reel", "Guided Posing & Styling Assistance"] , addons: [ "➕ Mom Outfit: ₹800", "➕ Makeup & Hairstyle (Mom): ₹1,200", "➕ Hairstyle Only: ₹600", "➕ Saree Drapping: ₹200"]},
+      { name: "Grand Celebration (Indoor + Outdoor)", price: "₹7,000", duration: "", outfit: "",  images: "", features: ["<strong> 3 Hour </strong> of Professional Photography","Setups (2 Indoor + 1 Outdoor)","<strong>30</strong> High-End Retouched Images","Make-up,Hairstyle & Gown for Mom are <strong>Not</strong> Included","Baby Solo + Family Photos + 1 Reel","Indoor + Outdoor Garden Shoot",   "Guided Posing & Styling Assistance","Outdoor Garden Charges has to bare by client: ₹300–500 approx.","Complimentary for Previous Clients: Mom Gown / Family Reel / Hairstyle"], addons: ["➕ Mom Gown: ₹800", "➕ Makeup & Hairstyle (Mom): ₹1,200", "➕ Saree Drapping: ₹200", "➕ Hairstyle Only: ₹600"] }
+    ]},
+    { id: "newborn", title: " Newborn Photoshoot", icon: "fas fa-baby", packages: [
+      { name: "Baby Bliss Package", price: "₹6,000", duration: "", outfit: "", images: "", features: ["<strong> 1 Hour </strong>of Professional Photography","All Props, Outfits & Wraps are <strong>Included</strong>","Make-up,Hairstyle & Reel are <strong>Not</strong> Included","<strong>15 </strong> High-End Retouched Soft Copies","2 Premium Themed Setups", "Family Photos Included", "Guided Posing & Styling Assistance"], addons: ["➕ Home Visit: ₹2,000", "➕ Mom Outfit: ₹800", "➕ Makeup & Hairstyle (Mom): ₹1,200", "➕ Hairstyle Only: ₹600", "➕ Reel: ₹1000", "➕ Saree Drapping: ₹200"] }
+    ]},
+    { id: "family", title: " Family Photoshoot", icon: "fas fa-users", packages: [
+      { name: "Family Photoshoot Package", price: "₹4,000", duration: "", outfit: "", images: "", features: ["<strong> 1 Hour </strong>of Professional Photography","<strong>2</strong> Changes Allowed","<strong>20 </strong> High-End Retouched Soft Copies only","Make-up,Hairstyle & Reel are <strong>Not</strong> Included", "Guided Posing & Styling Assistance"], addons: ["➕ Home Visit: ₹2,000", "➕ Mom Outfit: ₹800", "➕ Makeup & Hairstyle (Mom): ₹1,200", "➕ Hairstyle Only: ₹600", "➕ Reel: ₹1000", "➕ Saree Drapping: ₹200"] }
+    
+    ]}
+    
+  ];
+
+  function buildCollapsiblePackages() {
+    const container = document.getElementById('packages-container-accordion');
+    if (!container) return;
+    container.innerHTML = '';
+    categoriesData.forEach((cat, idx) => {
+      const accordionDiv = document.createElement('div'); accordionDiv.className = 'accordion-category';
+      const header = document.createElement('div'); header.className = 'accordion-header';
+      header.innerHTML = `<div class="category-title-wrap"><i class="${cat.icon}"></i><h3>${cat.title}</h3></div><div class="accordion-toggle-icon"><i class="fas fa-chevron-down"></i></div>`;
+      const contentDiv = document.createElement('div'); contentDiv.className = 'accordion-content-packages';
+      const gridDiv = document.createElement('div'); gridDiv.className = 'package-grid-inside';
+      cat.packages.forEach(pkg => {
+        const card = document.createElement('div'); card.className = 'product-card';
+        let featuresHtml = `<ul class="feature-list">${pkg.features.map(f => `<li>${f}</li>`).join('')}</ul>`;
+        let addonHtml = pkg.addons ? `<div class="addon-box"><h5>➕ Add-Ons (Extra)</h5><div class="addon-list">${pkg.addons.map(a => `<span>${a}</span>`).join('  ')}</div></div>` : '';
+        // NEW: per-package terms & conditions
+        const pkgTermsHtml = `<div class="important-notes"><a href="#terms-section" class="footer-menu-link"><h3>Terms & Conditions</h3></a></div>`;
+        card.innerHTML = `
+          <div class="package-card-head">
+            <h3 class="card-title"><i class="fas fa-camera-retro"></i> ${pkg.name}</h3>
+            <div class="package-price">${pkg.price}</div>
+            <i class="fas fa-plus package-head-icon" aria-hidden="true"></i>
+          </div>
+          ${pkg.duration} ${pkg.outfit} ${pkg.images}
+          ${featuresHtml}${addonHtml}${pkgTermsHtml}
+          <div class="product-enquiry-section">
+            <span class="note-text"><i class="fas fa-circle-info"></i> Enquire for availability</span>
+            <button class="product-enquiry-btn book-btn" data-pkg="${pkg.name} (${cat.title})"><i class="fab fa-whatsapp"></i> Enquire / Book</button>
+          </div>
+        `;
+        gridDiv.appendChild(card);
+      });
+      const galleryDiv = document.createElement('div'); galleryDiv.className = 'category-gallery';
+      galleryDiv.innerHTML = `<h4><i class="fas fa-images"></i> ${cat.title} Gallery</h4><div class="category-gallery-grid" id="gallery-${cat.id}"></div>`;
+      contentDiv.appendChild(gridDiv); contentDiv.appendChild(galleryDiv);
+      accordionDiv.appendChild(header); accordionDiv.appendChild(contentDiv);
+      container.appendChild(accordionDiv);
+      const galleryContainer = document.getElementById(`gallery-${cat.id}`);
+      if (galleryContainer && categoryGalleries[cat.id]) {
+        categoryGalleries[cat.id].forEach((url) => {
+          const img = document.createElement('img'); img.src = url; img.className = 'category-gallery-img';
+          const globalIndex = allGalleryImages.length;
+          allGalleryImages.push({ url: url });
+          img.onclick = () => { currentImageIndex = globalIndex; document.getElementById('modalImg').src = url; document.getElementById('modalCaption').innerText = ''; document.getElementById('imageModal').style.display = 'flex'; };
+          galleryContainer.appendChild(img);
+        });
+      }
+      const toggleIcon = header.querySelector('.accordion-toggle-icon i');
+      header.addEventListener('click', () => {
+        const isOpen = contentDiv.classList.contains('open');
+        contentDiv.classList.toggle('open');
+        toggleIcon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+      });
+      if (idx === 0) { contentDiv.classList.add('open'); toggleIcon.style.transform = 'rotate(180deg)'; }
+    });
+    const termsDiv = document.createElement('div'); termsDiv.className = 'terms-box';
+    termsDiv.innerHTML = `<h4>📌 General Terms & Conditions</h4><ul><li>A 30% advance payment is required to confirm your booking. The remaining amount must be paid immediately after the photoshoot.</li><li>All raw copies will be shared on the same day via Cloud or Pen Drive, upon completion of the remaining payment.</li><li>Final edited images will be delivered within 10 days after photo selection.</li><li>All required props will be provided by us.</li></ul>`;
+    //container.appendChild(termsDiv);
+  }
+  
+
+  // Enquiry form: service selection dynamically loads only that service's packages.
+  const enqService = document.getElementById('enqService');
+  const enqPackage = document.getElementById('enqPackage');
+  if (enqService && enqPackage) {
+    categoriesData.forEach(cat => {
+      const opt = document.createElement('option');
+      opt.value = cat.id; opt.textContent = cat.title.trim();
+      enqService.appendChild(opt);
+    });
+    enqService.addEventListener('change', () => {
+      const cat = categoriesData.find(c => c.id === enqService.value);
+      enqPackage.innerHTML = '';
+      if (!cat) {
+        enqPackage.disabled = true;
+        enqPackage.innerHTML = '<option value="">Select service first</option>';
+        return;
+      }
+      enqPackage.disabled = false;
+      enqPackage.innerHTML = '<option value="">Select package</option>';
+      cat.packages.forEach(pkg => {
+        const opt = document.createElement('option');
+        opt.value = pkg.name;
+        opt.textContent = `${pkg.name} — ${pkg.price}`;
+        enqPackage.appendChild(opt);
+      });
+    });
+  }
+  document.getElementById('enquiryForm')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const phone = (document.getElementById('enqPhone')?.value || '').replace(/\D/g,'');
+    const name = document.getElementById('enqName')?.value.trim() || '';
+    const service = enqService?.options[enqService.selectedIndex]?.text || '';
+    const pkg = enqPackage?.options[enqPackage.selectedIndex]?.text || '';
+    const date = document.getElementById('enqDate')?.value || 'Not specified';
+    const message = document.getElementById('enqMessage')?.value.trim() || 'Not specified';
+    if (phone.length < 10) {
+      document.getElementById('enqStatus').textContent = 'Please enter a valid mobile number.';
+      return;
+    }
+    const wa = `https://wa.me/918855003875?text=${encodeURIComponent(
+      `Hello Proshot Pixel, I would like to enquire.\n\nName: ${name}\nMobile: ${phone}\nService: ${service}\nPackage: ${pkg}\nPreferred Date: ${date}\nRequirements: ${message}`
+    )}`;
+    window.open(wa, '_blank');
+    document.getElementById('enqStatus').textContent = 'WhatsApp opened with your enquiry details. Please press Send in WhatsApp.';
+  });
+
+  buildCollapsiblePackages();
+  buildDressesGallery();
+  renderReviews();
+  
+   // Dress Accordion Logic
+  const dressHeader = document.getElementById('dressAccordionHeader');
+  const dressContent = document.getElementById('dressAccordionContent');
+  const dressIcon = dressHeader.querySelector('.accordion-toggle-icon i');
+  dressHeader.addEventListener('click', () => {
+    const isOpen = dressContent.classList.contains('open');
+    dressContent.classList.toggle('open');
+    dressIcon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+  });
+  dressContent.classList.add('open'); // default open
+  dressIcon.style.transform = 'rotate(180deg)';
+
+  document.getElementById('downloadDressPdfBtn')?.addEventListener('click', () => { const link = document.createElement('a'); link.href = './pdf/Proshot-Pixel-Outfits.pdf'; link.download = 'Proshot-Pixel-Outfits.pdf'; link.click(); });
+  function showPrevImage() { if (allGalleryImages.length) { currentImageIndex = (currentImageIndex - 1 + allGalleryImages.length) % allGalleryImages.length; document.getElementById('modalImg').src = allGalleryImages[currentImageIndex].url; const dress = dressImages.find(d => d.url === allGalleryImages[currentImageIndex].url); document.getElementById('modalCaption').innerText = dress ? dress.color : ''; } }
+  function showNextImage() { if (allGalleryImages.length) { currentImageIndex = (currentImageIndex + 1) % allGalleryImages.length; document.getElementById('modalImg').src = allGalleryImages[currentImageIndex].url; const dress = dressImages.find(d => d.url === allGalleryImages[currentImageIndex].url); document.getElementById('modalCaption').innerText = dress ? dress.color : ''; } }
+  document.addEventListener('click', (e) => { if (e.target.classList.contains('book-btn') || e.target.closest('.book-btn')) { const btn = e.target.closest('.book-btn'); const pkgName = btn.getAttribute('data-pkg') || "Photoshoot Package"; window.open(`https://wa.me/918855003875?text=Hi%20Proshot%20Pixel!%20I'm%20interested%20in%20${encodeURIComponent(pkgName)}.`, '_blank'); } });
+  const modal = document.getElementById('imageModal'); const closeBtn = document.querySelector('#imageModal .close'); const prevBtn = document.getElementById('modalPrevBtn'); const nextBtn = document.getElementById('modalNextBtn');
+  closeBtn?.addEventListener('click', () => { modal.style.display = 'none'; });
+  prevBtn?.addEventListener('click', showPrevImage); nextBtn?.addEventListener('click', showNextImage);
+  modal?.addEventListener('click', (e) => { if (e.target === modal) modal.style.display = 'none'; });
+  document.addEventListener('keydown', (e) => { if (modal.style.display === 'flex') { if (e.key === 'ArrowLeft') showPrevImage(); else if (e.key === 'ArrowRight') showNextImage(); else if (e.key === 'Escape') modal.style.display = 'none'; } });
+  document.getElementById('copyLinkBtn')?.addEventListener('click', () => { navigator.clipboard.writeText("https://proshotpixel-source.github.io/ProshotPixel/"); alert("✨ Profile link copied ✨"); });
+  document.getElementById('shareNowBtn')?.addEventListener('click', () => { if(navigator.share) navigator.share({title:'PROSHOT PIXEL', url:'https://proshotpixel-source.github.io/ProshotPixel/'}); else alert("Share this page!"); });
+  document.getElementById('saveQrBtn')?.addEventListener('click', () => { const qr = document.querySelector('.qr-code-image'); if(qr) { const a = document.createElement('a'); a.href = qr.src; a.download = 'proshot_qr.png'; a.click(); } });
+  //let storedViews = localStorage.getItem('proshotPixelViews'); let views = storedViews ? parseInt(storedViews) : 0; views++; localStorage.setItem('proshotPixelViews', views); document.getElementById('viewCounterTop').innerText = views;
+  
+  
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+import { getDatabase, ref, get, set, runTransaction } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCbuJesRJz858WpnboAZu5TVgyJ7li8Q4A",
+  authDomain: "proshotpixel-fa9d3.firebaseapp.com",
+  projectId: "proshotpixel-fa9d3",
+  databaseURL: "https://proshotpixel-fa9d3-default-rtdb.firebaseio.com"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+const today = new Date().toISOString().split("T")[0];
+const visitsRef = ref(db, "visits");
+const dailyRef = ref(db, "daily/" + today);
+
+// LIVE VISITOR COUNTER: increase on EVERY page load / refresh.
+  async function incrementVisitorsOnPageLoad() {
+    const counterEl = document.getElementById("counter");
+    try {
+      const result = await runTransaction(visitsRef, current => (Number(current) || 0) + 1);
+      const count = result.snapshot.exists() ? Number(result.snapshot.val()) : 1;
+      if (counterEl) counterEl.innerText = count.toLocaleString("en-IN");
+    } catch (error) {
+      console.error("Visitor counter update failed:", error);
+      try {
+        const snapshot = await get(visitsRef);
+        const count = snapshot.exists() ? Number(snapshot.val()) : 0;
+        if (counterEl) counterEl.innerText = count.toLocaleString("en-IN");
+      } catch (_) {
+        if (counterEl) counterEl.innerText = "—";
+      }
+    }
+  }
+
+  // A new page load increments the shared Firebase visitor count.
+  incrementVisitorsOnPageLoad();
+</script>
+ 
+</body>
+</html>
