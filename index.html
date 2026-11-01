@@ -2036,8 +2036,8 @@ const categoryGalleries = {
   prevBtn?.addEventListener('click', showPrevImage); nextBtn?.addEventListener('click', showNextImage);
   modal?.addEventListener('click', (e) => { if (e.target === modal) modal.style.display = 'none'; });
   document.addEventListener('keydown', (e) => { if (modal.style.display === 'flex') { if (e.key === 'ArrowLeft') showPrevImage(); else if (e.key === 'ArrowRight') showNextImage(); else if (e.key === 'Escape') modal.style.display = 'none'; } });
-  document.getElementById('copyLinkBtn')?.addEventListener('click', () => { navigator.clipboard.writeText("https://proshotpixel-source.github.io/ProshotPixel/"); alert("✨ Profile link copied ✨"); });
-  document.getElementById('shareNowBtn')?.addEventListener('click', () => { if(navigator.share) navigator.share({title:'PROSHOT PIXEL', url:'https://proshotpixel-source.github.io/ProshotPixel/'}); else alert("Share this page!"); });
+  document.getElementById('copyLinkBtn')?.addEventListener('click', () => { navigator.clipboard.writeText("https://proshotpixel.digicardstudio.workers.dev/"); alert("✨ Profile link copied ✨"); });
+  document.getElementById('shareNowBtn')?.addEventListener('click', () => { if(navigator.share) navigator.share({title:'PROSHOT PIXEL', url:'https://proshotpixel.digicardstudio.workers.dev/'}); else alert("Share this page!"); });
   document.getElementById('saveQrBtn')?.addEventListener('click', () => { const qr = document.querySelector('.qr-code-image'); if(qr) { const a = document.createElement('a'); a.href = qr.src; a.download = 'proshot_qr.png'; a.click(); } });
   //let storedViews = localStorage.getItem('proshotPixelViews'); let views = storedViews ? parseInt(storedViews) : 0; views++; localStorage.setItem('proshotPixelViews', views); document.getElementById('viewCounterTop').innerText = views;
   
